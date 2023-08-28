@@ -1,10 +1,18 @@
-﻿namespace CleancodeKata.stage1
+﻿using System;
+using System.Linq;
+
+namespace CleancodeKata.stage1
 {
     /**
      * Uncomment the tests, and make them pass
      */
     public class Stage1
     {
+        public int ComputePrice(Items[] cart)
+        {
+            return cart.Sum(item => item.GetPrice());
+        }
+
         public class Items
         {
             public static Items POTATO = new Items(1);
